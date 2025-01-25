@@ -1,5 +1,5 @@
 
-    function dowloading(url:string) { 
+    export function dowloading(url:string) { 
         const connect:boolean = true;
         return new Promise(function(resolve, reject) {
             if (connect) {
