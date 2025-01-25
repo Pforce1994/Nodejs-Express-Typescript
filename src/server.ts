@@ -1,18 +1,11 @@
-import { calculate, display } from './Callback'
-import { Download } from './Dowload';   
-import  { start }   from "./AsyncAwait";
+import express from 'express';
+import myRouter from './Router/myRouter';
+
+const app: express.Application = express();
+
+app.use(myRouter);
 
 
-console.log("เริ่มต้นโหลด")
-setTimeout(() => {
-    console.log("กำลังดาวน์โหลดข้อมูล")
-    calculate (50, 100,display)
-
-    const download = new Download();
-    download.downloadFile();  
-
-    start();
-
-
-}, 1000);
-console.log("จบการทำงาน")
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
