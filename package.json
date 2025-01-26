@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "tsx src/main.ts",
-    "dev": "tsx --watch src/server.ts"
+    "dev": "tsx --watch src/app.ts"
   },
   "keywords": [],
   "author": "gotdeveloper",
@@ -16,5 +16,8 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.10",
     "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10"
   }
 }
